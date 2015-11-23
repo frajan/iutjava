@@ -4,6 +4,7 @@
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="C:\Users\packard\Downloads\TP3\TP3\src"/>
 			<item value="C:\Users\packard\Desktop\src"/>
 			<item value="C:\Users\packard\Desktop\edu"/>
 			<item value="C:\Users\packard\Downloads\IUTTrainTP2\IUTTrainTP2\src"/>
