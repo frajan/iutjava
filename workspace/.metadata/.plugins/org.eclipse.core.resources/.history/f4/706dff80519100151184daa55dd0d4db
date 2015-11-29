@@ -1,8 +1,0 @@
-package edu.iut.app;
-
-import java.util.ArrayList;
-
-public class Date extends ArrayList<ExamEvent> {
-
-	
-}

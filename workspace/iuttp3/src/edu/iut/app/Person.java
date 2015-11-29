@@ -1,6 +1,14 @@
 package edu.iut.app;
 
-public class Person {
+import java.util.ArrayList;
+
+public class Person extends ArrayList<ExamEvent> implements IExamEvent {
+	
+	protected PersonFunction personFunction;
+	protected String firstname;
+	protected String lastname;
+	protected String email;
+	protected String phone;
 	
 	public enum PersonFunction{
 		/* EX2 : Internationalisation */
@@ -23,13 +31,29 @@ public class Person {
 		personFunction = PersonFunction.NONE;
 	}
 	
-	public Person(PersonFunction personFunction,
-				  String firstname,
-				  String lastname,
-				  String email,
-				  String phone) {
-		/* EX2: initialisation */;
+	public Person(PersonFunction personFunction,String firstname,String lastname,String email,String phone) {
+		/* EX2: initialisation */
+		this.setFunction(personFunction);
+		this.setFirstname(firstname);
+		this.setLastname(lastname);
+		this.setEmail(email);
+		this.setPhone(phone);
+		
 	}
+	
+	
+	@Override
+	public ArrayList<ExamEvent> critere(ArrayList<ExamEvent> examEvents, Object o) {
+		ArrayList <ExamEvent> personExam = new ArrayList<ExamEvent>();
+		if( o instanceof Person){
+			for (ExamEvent ee: examEvents){
+				if(ee.getStudent() != null)
+				personExam.add(ee);	
+			}
+		}
+		return personExam;
+	}	
+	
 	
 	public void setFunction(PersonFunction function) {
 		this.personFunction = function;
@@ -65,11 +89,8 @@ public class Person {
 	}
 
 	
-	protected PersonFunction personFunction;
-	protected String firstname;
-	protected String lastname;
-	protected String email;
-	protected String phone;
+
+
 	
 
 }

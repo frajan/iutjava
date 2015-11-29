@@ -32,8 +32,8 @@ public class CommandLineOption <ValueType>/* EX1 : CLASSE GENERIC SUR le type Va
 		/* EX1: Initializer les attributs */
 		this.key="null";
 		this.description="null";
-		this.defaultValue= (ValueType) OptionType.NOVALUE;
-		
+		this.setValue(defaultValue);
+		this.value = null;
 	}
 	public CommandLineOption(final OptionType optionType, final String key, final String description, final ValueType defaultValue) {
 		/* EX1 : Affecter les attributs */
@@ -41,6 +41,7 @@ public class CommandLineOption <ValueType>/* EX1 : CLASSE GENERIC SUR le type Va
 		this.key=key; 
 		this.description=description; 
 		this.defaultValue=defaultValue;
+		this.setValue(defaultValue);
 		
 	}
 	public void setOption(OptionType optionType, String key, String description, ValueType defaultValue) {

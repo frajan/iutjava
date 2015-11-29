@@ -1,28 +1,25 @@
 package edu.iut.app;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Locale;
+
+import javax.swing.JOptionPane;
 
 public class Date extends ArrayList<ExamEvent> implements IExamEvent {
 
 	@Override
-	public ArrayList<ExamEvent> critere(ArrayList<ExamEvent> examEvents) {
+	public ArrayList<ExamEvent> critere(ArrayList<ExamEvent> examEvents,Object o) {
 		ArrayList <ExamEvent> dateExam = new ArrayList<ExamEvent>();
-		
-		for(ExamEvent ee : examEvents ){
-			if(ee.getExamDate()!= null){
-				
+		if( o instanceof Date){
+			for (ExamEvent ee: examEvents){
+				if(ee.getClassroom() != null)
+				dateExam.add(ee);	
 			}
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		return null;
+		return dateExam;
 	}
-
 	
 }
+
+	

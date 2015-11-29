@@ -1,0 +1,20 @@
+package edu.iut.app;
+
+import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
+
+public class Salle extends ArrayList<ExamEvent> implements IExamEvent {
+	@Override
+	public ArrayList<ExamEvent> critere(ArrayList<ExamEvent> examEvents,Object o) {
+		ArrayList <ExamEvent> salleExam = new ArrayList<ExamEvent>();
+		if( o instanceof Salle){
+			for (ExamEvent ee: examEvents){
+				if(ee.getClassroom() != null)
+				salleExam.add(ee);	
+			}
+			
+		}
+		return salleExam;
+	}
+}

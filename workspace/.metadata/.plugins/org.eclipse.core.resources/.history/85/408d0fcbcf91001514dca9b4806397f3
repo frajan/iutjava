@@ -1,0 +1,46 @@
+package edu.iut.app;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Locale;
+
+public class Date extends ArrayList<ExamEvent> implements IExamEvent {
+
+	@Override
+	public ArrayList<ExamEvent> critere(ArrayList<ExamEvent> examEvents) {
+		ArrayList <ExamEvent> dateExam = new ArrayList<ExamEvent>();
+	
+		
+	SimpleDateFormat sdf = new SimpleDateFormat("jj-mm-aaaa", Locale.FRANCE);
+	sdf.setLenient(true);	
+	Date d = new Date();
+	String date="" ;
+	String dateFormat = sdf.format(sdf);
+	try {
+		for(ExamEvent ee :examEvents) {
+			date=sdf.format(ee.getExamDate());
+			if (date == dateFormat){
+				examEvents.add(ee);
+			}
+			else{
+				throw ("Format date incorrect"); 
+			}
+		}
+		
+		
+	
+		
+		
+		
+		
+		return null;
+	}
+
+	@Override
+	public int compareTo(Date d) {
+        
+		return 0;
+	}
+
+	
+}

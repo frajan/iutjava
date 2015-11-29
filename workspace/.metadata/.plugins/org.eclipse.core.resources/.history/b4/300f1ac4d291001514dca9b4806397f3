@@ -1,0 +1,14 @@
+package edu.iut.app;
+
+import java.util.ArrayList;
+
+public class Personne extends ArrayList<ExamEvent> implements IExamEvent {
+
+	@Override
+	public ArrayList<ExamEvent> criterePersonne(ArrayList<ExamEvent> examEvents) {
+		ArrayList <ExamEvent> persExam = new ArrayList<ExamEvent>();
+	
+	
+	
+	
+}

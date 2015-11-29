@@ -12,8 +12,7 @@ public class ExamEvent {
 	public ExamEvent() {		
 	}
 	
-	public ExamEvent(Date date, Person person, ArrayList<Person> jury,
-					Classroom classRoom, ArrayList<Document> document) {
+	public ExamEvent(Date date, Person person, ArrayList<Person> jury,Classroom classRoom, ArrayList<Document> document) {
 		this.examDate=date; 
 		this.student=person;
 		this.jury=jury;
