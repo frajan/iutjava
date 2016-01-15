@@ -27,10 +27,10 @@ public class DayPanel extends EventPanel {
 				this.setLayout(daysLayout);
 				this.add(new JLabel(weekDayNames.toString()));
 			}
-			
-			
+						
 			for (int hi = 0;hi<24;hi++) {
 				JPanel hour = new JPanel();
+				// EX4 : Creer votre propre widget permettant, l'ajout d'un évènement et d'une personne
 				hour.add(new JLabel(new Integer(hi).toString()));
 				this.add(hour);
 			}
@@ -42,4 +42,16 @@ public class DayPanel extends EventPanel {
 		
 		}
 	}
+	
+	protected void setupUIDayView() {
+		
+	}
+	protected void setupUIWeekView() {
+		
+	}
+	protected void setupUIMonthView() {
+		
+	}
+
+
 }

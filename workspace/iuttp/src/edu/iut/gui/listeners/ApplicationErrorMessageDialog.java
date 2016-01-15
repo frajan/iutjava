@@ -7,8 +7,7 @@ public class ApplicationErrorMessageDialog extends
 
 	@Override
 	protected void showMessage(String level, String message) {
-		/** UTILISER l'AIDE FOURNI DANS L'ENNONCE */
-		JOptionPane.showMessageDialog(null, message, level, JOptionPane.ERROR_MESSAGE);
-		
+		JOptionPane.showMessageDialog(null, message, level, JOptionPane.ERROR_MESSAGE, null);
 	}
+
 }
